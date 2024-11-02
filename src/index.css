@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #009345;
+  --secondary-color: #47AA49;
+  --alt-color: #0F5A02;
+  --auth-bg: #F3F1F1;
+  --dark-heading: #313131;
+  --light-heading: #3C3939;
+  --warning: #E33629;
+  --yellow: #ECBB51;
+  --db-dark-heading: #25324B;
+  --db-light-heading: #7C8493;
+}
