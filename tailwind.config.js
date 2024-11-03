@@ -17,6 +17,8 @@ export default {
         'yellow': "var(--yellow)",
         'db-dark-heading': "var(--db-dark-heading)",
         'db-light-heading': "var(--db-light-heading)",
+        'db-nav-icon': "var(--db-nav-icon)",
+        'dashboard-bg': "var(--dashboard-bg)",
       }
     },
   },
