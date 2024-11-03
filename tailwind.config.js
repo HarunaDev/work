@@ -14,7 +14,7 @@ export default {
         'dark-heading': "var(--dark-heading)",
         'light-heading': "var(--light-heading)",
         'warning': "var(--warning)",
-        'yellow': "var(--yellow)",
+        'db-yellow': "var(--db-yellow)",
         'db-dark-heading': "var(--db-dark-heading)",
         'db-light-heading': "var(--db-light-heading)",
         'db-nav-icon': "var(--db-nav-icon)",

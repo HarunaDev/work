@@ -39,10 +39,10 @@ function App() {
 
           <Route path="payment" element={<Payment />} />
 
-          <Route path="attendance" element={<Attendance />} > 
-            <Route path="clock-in" element={<ClockIn />}/>
-            <Route path="clock-out" element={<ClockOut />}/>
-          </Route>
+          <Route path="attendance" element={<Attendance />} /> 
+          <Route path="attendance/clock-in" element={<ClockIn />}/>
+          <Route path="attendance/clock-out" element={<ClockOut />}/>
+          
 
           <Route path="help" element={<Help />} />
         </Route>
