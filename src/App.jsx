@@ -37,7 +37,9 @@ function App() {
             <Route path="awaiting-approval" element={<AwaitingApproval />} />
           </Route>
 
-          <Route path="payment" element={<Payment />} />
+          <Route path="payment" element={<Payment />}> 
+            <Route path="payment/not-paid" element=""/>
+          </Route>
 
           <Route path="attendance" element={<Attendance />} /> 
           <Route path="attendance/clock-in" element={<ClockIn />}/>

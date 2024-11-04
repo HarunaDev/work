@@ -42,7 +42,7 @@ function OTPVerification() {
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission
-    navigate('/recruitment'); // Navigate to the recruitment page
+    navigate('/recruitment/profile-info'); // Navigate to the recruitment page
   };
 
   return (

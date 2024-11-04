@@ -16,3 +16,22 @@
   --db-nav-icon: #A098AE;
   --dashboard-bg: #fafafa;
 }
+
+/* custom-styles.css */
+.centered-left-border::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  transform: translateY(-50%);
+  height: 10%; /* Adjust the height as needed */
+  width: 4px; /* Adjust the width as needed */
+  background-color: var(--primary-color); /* Use Tailwind's green-500 (#10b981) color */
+  border-radius: 9999px; /* To make it a rounded border */
+}
+
+
+/* Add this CSS to your global CSS file or inline */
+.progress-ring {
+  background: conic-gradient(green 0deg 270deg, gray 270deg 360deg); /* Adjust angles for progress */
+}

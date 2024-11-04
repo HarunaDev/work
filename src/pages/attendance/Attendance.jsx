@@ -43,7 +43,7 @@ function Attendance() {
 
   return (
     <div className="px-4 py-6 md:px-12">
-      <Greeting text="Welcome back! Here’s your attendance overview." />
+      <Greeting text="Welcome back to work at the Service Center, HMO Ward 3. Enjoy your stay" />
       
       <div className="flex flex-col md:flex-row mt-8 gap-8">
         <div className="flex-1 flex flex-col gap-6">
