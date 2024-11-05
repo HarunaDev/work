@@ -19,7 +19,10 @@ export default {
         'db-light-heading': "var(--db-light-heading)",
         'db-nav-icon': "var(--db-nav-icon)",
         'dashboard-bg': "var(--dashboard-bg)",
-      }
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [

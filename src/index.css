@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root {
   --primary-color: #009345;
   --secondary-color: #47AA49;
@@ -16,6 +18,11 @@
   --db-nav-icon: #A098AE;
   --dashboard-bg: #fafafa;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 
 /* custom-styles.css */
 .centered-left-border::before {
