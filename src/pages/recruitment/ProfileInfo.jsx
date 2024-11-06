@@ -37,31 +37,37 @@ const PersonalDetails = () => (
     <div className="w-full lg:w-1/2">
       <h3 className="text-lg font-semibold text-gray-800">Personal Details</h3>
     </div>
-    <form className="w-full lg:w-1/2 flex flex-col gap-4 mt-4">
-      <label htmlFor="firstName" className="block text-gray-700 mb-2">
-        First Name
-      </label>
-      <input
-        type="text"
-        id="firstName"
-        className="border border-gray-300 rounded-md w-full p-2"
-        placeholder="Enter your first name"
-      />
+    <form className="w-full lg:w-3/4 flex flex-col gap-4 mt-4">
+      <div>
+        <>
+        <label htmlFor="firstName" className="block text-gray-700 mb-2">
+            Full Name <span className='text-warning'>*</span>
+        </label>
+        <input
+            type="text"
+            id="fullName"
+            className="border border-gray-300 rounded-md w-full p-2 mb-3"
+            placeholder="Enter your full name"
+        />
+        </>
 
-      <label htmlFor="email" className="block text-gray-700 mb-2">
-        Email
-      </label>
-      <input
-        type="email"
-        id="email"
-        className="border border-gray-300 rounded-md w-full p-2"
-        placeholder="Enter your Email"
-      />
+        <>
+        <label htmlFor="email" className="block text-gray-700 mb-2">
+            Email <span className='text-warning'>*</span>
+        </label>
+        <input
+            type="email"
+            id="email"
+            className="border border-gray-300 rounded-md w-full p-2"
+            placeholder="Enter your Email"
+        />
+        </>
+      </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="w-full sm:flex-1">
           <label htmlFor="phoneNumber" className="block text-gray-700 mb-2">
-            Phone Number
+            Phone Number <span className='text-warning'>*</span>
           </label>
           <input
             type="tel"
@@ -72,21 +78,24 @@ const PersonalDetails = () => (
         </div>
         <div className="w-full sm:flex-1">
           <label htmlFor="partner" className="block text-gray-700 mb-2">
-            Partner
+            Partner <span className='text-warning'>*</span>
           </label>
-          <input
-            type="text"
+          <select
             id="partner"
             className="border border-gray-300 rounded-md w-full p-2"
-            placeholder="Enter Partner..."
-          />
+          >
+            <option value="" disabled selected>Select Partner</option>
+            <option value="male">Partner 1</option>
+            <option value="female">Partner 2</option>
+            <option value="other">Partner 3</option>
+          </select>
         </div>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="w-full sm:flex-1">
           <label htmlFor="dob" className="block text-gray-700 mb-2">
-            Date of Birth
+            Date of Birth <span className='text-warning'>*</span>
           </label>
           <input
             type="date"
@@ -96,7 +105,7 @@ const PersonalDetails = () => (
         </div>
         <div className="w-full sm:flex-1">
           <label htmlFor="gender" className="block text-gray-700 mb-2">
-            Gender
+            Gender <span className='text-warning'>*</span>
           </label>
           <select
             id="gender"
@@ -113,7 +122,7 @@ const PersonalDetails = () => (
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="w-full sm:flex-1">
           <label htmlFor="account" className="block text-gray-700 mb-2">
-            Account Number
+            Account Number <span className='text-warning'>*</span>
           </label>
           <input
             type="number"
@@ -124,7 +133,7 @@ const PersonalDetails = () => (
         </div>
         <div className="w-full sm:flex-1">
           <label htmlFor="bank" className="block text-gray-700 mb-2">
-            Bank Name
+            Bank Name <span className='text-warning'>*</span>
           </label>
           <select
             id="bank"

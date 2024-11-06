@@ -2,20 +2,21 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import InputField from "./components/InputField";
 import LandingLogo from "../../assets/PHC-logo_1.png";
-import { useLoginMutation } from "../../redux/slices/authApiSlice";
+// import { useLoginMutation } from "../../redux/slices/authApiSlice";
 import useLogin from "./hooks/useLogin";
 import { FaGoogle, FaLinkedin } from 'react-icons/fa';
 import AuthMedia from "../../components/AuthMedia";
 
 
 function Login() {
-  const [loginResponse, setLoginResponse] = useState({});
-  const { handleLogin, isLoading: isLoggingIn } = useLogin();
-  const handleOnLogin = async (data) => {
+  // const [loginResponse, setLoginResponse] = useState({});
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("")
+  const { handleLogin} = useLogin();
+
+  const handleOnLogin = async (event) => {
     event.preventDefault();
-    const response = await handleLogin(data);
-    setLoginResponse(response);
-    console.log(response);
+    await handleLogin({email, password});
   };
 
   return (
@@ -26,9 +27,9 @@ function Login() {
           <img src={LandingLogo} alt="Logo" className="mx-auto lg:w-auto md:w-64 sm:w-64 mb-4" />
           <h1 className="text-xl md:text-4xl text-dark-heading font-bold text-center mb-6">Welcome Back!</h1>
 
-          <form className="space-y-6" action="/auth/login" method="post" onSubmit={() => handleOnLogin({email: "admin@demol", password: "123456"})}>
-            <InputField placeholder="Email Address" type="email" name="email" />
-            <InputField placeholder="Password" type="password" name="password" />
+          <form className="space-y-6"  onSubmit={handleOnLogin}>
+            <InputField placeholder="Email Address" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <InputField placeholder="Password" type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
             <div className="text-right">
               <Link to="/reset-password" className="text-primary-color text-sm font-semibold">

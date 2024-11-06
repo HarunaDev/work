@@ -3,7 +3,7 @@ import Login from "./pages/auth/Login";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import Register from "./pages/recruitment/Register";
 import DashBoard from "./pages/DashBoard";
-import Onboarding from "./pages/recruitment/Onboarding";
+import Recruitment from "./pages/recruitment/Recruitment"
 import ProfileInfo from "./pages/recruitment/ProfileInfo";
 import UploadCV from "./pages/recruitment/UploadCV";
 import AwaitingApproval from "./pages/recruitment/AwaitingApproval";
@@ -30,7 +30,8 @@ function App() {
         <Route path="/" element={<DashBoard />}>
           <Route path="home" element={<Home />} />
 
-          <Route path="recruitment" element={<Onboarding />}> 
+          {/* Recruitment */}
+          <Route path="recruitment" element={<Recruitment />}> 
             <Route index element={<ProfileInfo />} /> {/* Default to ProfileInfo */}
             <Route path="profile-info" element={<ProfileInfo />} />
             <Route path="upload-cv" element={<UploadCV />} />
@@ -39,6 +40,7 @@ function App() {
 
           <Route path="payment" element={<Payment />}> 
             <Route path="payment/not-paid" element=""/>
+            <Route path="payment/paid" element=""/>
           </Route>
 
           <Route path="attendance" element={<Attendance />} /> 

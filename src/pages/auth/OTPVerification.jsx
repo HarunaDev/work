@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthMedia from "../../components/AuthMedia";
 import LandingLogo from "../../assets/PHC-logo_1.png";
 
@@ -48,14 +48,14 @@ function OTPVerification() {
   return (
     <div className="flex flex-col md:flex-row h-screen">
       <div className="bg-auth-bg w-full md:w-3/5 flex justify-center items-center">
-        <div className="flex flex-col justify-center items-center space-y-12 h-2/3 w-full max-w-lg p-6">
+        <div className="flex flex-col justify-center items-center space-y-10 h-2/3 w-full max-w-lg p-6">
           <img src={LandingLogo} alt="Logo" className="mx-auto lg:w-auto md:w-64 sm:w-64 mb-4" />
-          <h1 className="text-xl md:text-4xl text-dark-heading font-bold text-center mb-6">OTP Verification</h1>
+          <h1 className="text-xl md:text-4xl text-dark-heading font-bold text-center mb-4">OTP Verification</h1>
           <p className="text-gray-600 text-center">
             We sent a code to <span className="font-semibold">your email</span>
           </p>
           
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="flex justify-center space-x-4">
               {[...Array(6)].map((_, i) => (
                 <input
@@ -73,13 +73,13 @@ function OTPVerification() {
             <div className="flex justify-center items-center gap-4">
               <p className="text-secondary-color">({formatTime()})</p>
               <p className="text-gray-500 cursor-pointer" onClick={resendCode}>
-                Didn't get a code? Resend
+                Didn't get a code? <Link to="#"><span className="text-secondary-color">Resend</span></Link>
               </p>
             </div>
 
             <button
               type="submit"
-              className="bg-primary-color text-white px-4 py-2 rounded w-80"
+              className="bg-primary-color text-white px-4 py-2 rounded w-full"
             >
               Create an Account
             </button>

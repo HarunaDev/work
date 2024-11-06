@@ -10,7 +10,7 @@ export const appApiHeader = {
 
 const getBaseUrl = () => {
   if (process.env.NODE_ENV === "development") {
-    return "https://localhost:44388/api";
+    return "https://pihcapi.xmapapp.com/api";
     // return "https://mock.apidog.com/m1/611770-578407-default";
   } else if (process.env.NODE_ENV === "production") {
     return "https://pihcapi.xmapapp.com";

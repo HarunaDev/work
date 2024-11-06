@@ -5,7 +5,7 @@ const authApiSlice = generalApiSlice.injectEndpoints({
     //Login
     login: builder.mutation({
       query: (body) => ({
-        url: "/auth/login",
+        url: "/Account/Login",
         method: "POST",
         body,
         headers: {

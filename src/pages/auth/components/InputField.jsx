@@ -1,6 +1,6 @@
 import { AiOutlineEye } from "react-icons/ai"; // Import the Eye icon from React Icons
 
-function InputField({ placeholder, type, name, onChange }) {
+function InputField({ placeholder, type, name, onChange, value }) {
   return (
     <div className="relative">
       <input
@@ -8,6 +8,7 @@ function InputField({ placeholder, type, name, onChange }) {
         placeholder={placeholder}
         type={type}
         name={name}
+        value={value}
         className="mt-1 block w-80 px-3 py-2 border-2 border-gray-500 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
       />
       {type === "password" && (

@@ -61,7 +61,7 @@ function Payment() {
             onClick={handlePaidClick} 
             disabled={buttonsDisabled}
             className={`mt-4 w-full px-4 py-2 rounded ${
-              buttonsDisabled ? 'bg-[#11380b] cursor-not-allowed' : 'bg-white text-green-500 hover:bg-primary-color'
+              buttonsDisabled ? 'bg-[#11380b] text-white cursor-not-allowed' : 'bg-white text-primary-color hover:bg-primary-color hover:text-white'
             }`}
           >
             Paid
@@ -70,7 +70,7 @@ function Payment() {
             onClick={handleNotPaidClick} 
             disabled={buttonsDisabled}
             className={`mt-4 w-full px-4 py-2 rounded border-2 ${
-              buttonsDisabled ? 'bg-[#11380b] border-0 cursor-not-allowed' : 'bg-[#0F5A02] text-white border-white hover:bg-primary-color'
+              buttonsDisabled ? 'bg-[#11380b] text-white border-0 cursor-not-allowed' : 'bg-[#0F5A02] text-white border-white'
             }`}
           >
             Not Paid
